@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+        div{
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        5..20 <br><br>
+        Gaining Access Theory behind Cracking WEP  Encryption<br>
+        WEP - Wired Equivalent Privacy<br>
+        Uses an algorithm called RC4<br>
+        Still used in some networks<br><br>
+        
+        WEP Cracking<br>
+        Clients encrypts data using a key<br>
+        Encrypted packet sent in the air<br>
+        Router decrypts packet using the key<br><br>
+        
+        Client——>router ——>internet<br><br>
+        
+        WEP Cracking<br>
+        A packet which is sent by client to router . This packet is encrypted using a unique key stream.<br>
+        Random Initialisation vector (IV) is used to generate key streams<br>
+        The initialisation vector is only 24 bits<br>
+        IV + key(password) = key stream<br><br>
+        
+        Result<br>
+        IV’s will repeat on busy networks<br>
+        This makes WEP vulnerable to statistical attacks<br>
+        Repeated IVs can be used to determine the key stream<br>
+        And break the encryption<br><br>
+        
+        To crack WEP we need to:<br>
+        Capture a large number of packets/IVs -> using airodump-ng<br>
+        Analyse the captured IVs and crack the key -> using aircrack-ng<br><br>
+        
+        open a terminal and hit this command<br>
+        airodump-ng --bssid F8:23:B2:B9:50:AB --channel 1 --write basic_wep mon0<br><br>
+
+        In other terminal<br>
+        First is to find the basic_wep file basic_wep-01.cap<br>
+        aircrack-ng basic_wep-01.cap<br>
+        When you hit the command it will tell whether the key found or not<br>
+        It will show o/p like this<br>
+        Key found ! 41:73:32:33:70 (ASCII: As23p)<br><br>
+        
+        Now Remove all the : from the key so we will get the key<br>
+        4173323370<br><br>
+        
+        You can go to your computer and try to connect to the target network and give this password and it will work<br><br>
+        
+        This is how we break the encryption<br><br>
+        
+
+    </div>
+</body>
+
+</html>
