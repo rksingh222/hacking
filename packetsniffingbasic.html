@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Packet Sniffing Basic<br><br>
+        5..16<br><br>
+
+        iwconfig - shows ethernets connected like wireless adapter or ethernet<br>
+
+        If I have any wireless adapter it will show and it will show whether its in monitor mode or normal mode<br>
+
+        Lets say if I have a wireless adapter with monitor mode then example<br>
+        mon0<br><br>
+
+        Command<br>
+        airodump-ng mon0<br>
+
+        It will discover all the wireless networks around me and all the information about them<br>
+
+        To quit them you press ctrl + c<br><br>
+
+        bssid - MAC address of the target network<br>
+        pwr - signal strength<br>
+        beacons - frames sent by network to broadcast its existence<br>
+        Data - number of data packets<br>
+        #/s -<br>
+        Ch - channel the n/w works on<br>
+        MB - maximum speed supported by our network<br>
+        ENC - encryption ( WPA, WEP, OPN(it doesn’t use encryption), WPA2)<br>
+        CIPHER - (CCMP, WEP, CCMP)<br>
+        AUTH - (PSK, MGT)<br>
+        ESSID - names of the network<br><br>
+
+        5..17<br><br>
+
+        Wifi Bands<br>
+        Decides the frequency range that can be used<br>
+        Determines the channels that can be used<br>
+        Clients need to support band used by router to communicate with it<br>
+        Data can be sniffed from a certain band if the wireless adapter used supports that band<br><br>
+
+        Most common wifi bands are<br>
+        . A uses 5ghz frequency<br>
+        . Both used 2.5gh frequencies only<br>
+
+        Wireless adapter name- alpha awus036 ach<br><br>
+
+        To find wifi bands above 5ghz<br>
+        airodump-ng - -band a mon0<br><br>
+
+        To see all wifi bands<br>
+        airodump-ng - - band abg mon0<br><br>
+
+        5..18<br><br>
+
+        airodump-ng - - bssid F8:23:B2:B9:50:A8 - - channel 2 - - write test mon0<br>
+
+        When you write this airodump command with the bssid(Network) of Mac address you will find the stations which it<br>
+        is connected to stations is the device(Lets say my windows or apple computer is connected to bssid then will<br>
+        give Mac address of windows and apple computer) MAC address<br>
+
+        ls<br>
+
+        Main file that we need is test-01.cap<br>
+
+        Tool use - Wireshark to analysed data<br>
+
+        In terminal<br>
+        wireshark<br>
+
+        File ->root ->test-01.cap<br>
+
+    </div>
+</body>
+
+</html>
