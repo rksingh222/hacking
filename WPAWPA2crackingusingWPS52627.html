@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        5..25<br><br>
+
+        WPA/WPA2 Cracking<br>
+        1. Both can be cracked using the same methods<br>
+        2. Made to address the issues in WEP<br>
+        3. Much more secure<br>
+        4. Each packet is encrypted using a unique temporary key<br><br>
+        
+        Packets contain no useful information<br><br>
+        
+        Feature when enabled and misconfigured can be exploited  to recover the key without having to crack actual encryption<br>
+        Feature is WPS<br>
+        WPS is a feature <br>
+        WPS is a button which is available with most wireless printer when pressed and when WPS button in printer is pressed they connect without entering the key<br>
+        Authentication is done using an 8 digit pin<br>
+        1. 8 digits is very small<br>
+        2. We can try all possible pins in relatively short time<br>
+        3. Then the WPS pin can be used to compute the actual password<br>
+        PS: This only works if the router is configured not to use PBC(push button authentication)<br><br>
+        
+        In one terminal<br>
+        To know the WPS enabled on the network<br>
+        wash --interface mon0<br><br>
+        
+        It shows ESSID-(target network)<br>
+        Vendor - <br>
+        Lck tells whether wps is lock or not<br>
+        Version of WPS<br>
+        Press CTRL + C to stop the program<br><br>
+        
+        To communicate with network we use<br>
+        aireplay-ng --fakeauth 30 -a 00:10:18:90:2D:EE -h 48:5D:60:2A:45:25 mon0<br><br>
+        
+        Don’t execute this command<br><br>
+        
+        Go to second terminal<br>
+        We will use reaver to bruteforce the password<br>
+        reaver --bssid 00:10:18:90:2D:EE --channel 1 --interface mon0 -vvv  --no-associate<br>
+        Enter this command<br><br>
+        
+        Go to previous terminal <br>
+        Hit the aireplay-ng command<br>
+        It will show the password in second terminal <br>
+        
+
+    </div>
+</body>
+
+</html>
