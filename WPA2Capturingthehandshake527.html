@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        5..27<br><br>
+
+        Capturing the Handshake<br>
+        WPA/WPA2 Cracking<br>
+        1. Fixed all weaknesses in WEP<br>
+        2. Packets contain no useful data<br>
+        3. Only packets that can aid with the cracking process are the handshake packets<br>
+        4. These handshake are 4 packets sent when a client connect to the network<br><br>
+        In terminal<br>
+        First press airodump-ng <br><br>
+        In same terminal<br>
+        airodump-ng --bssid 00:10:18:90:2D:EE --channel 1 --write wpa_handshake mon0 <br>
+        Hit enter<br>
+        Wait for another client to enter and then we will see the handshake<br>
+        Alternatively there is another option we can do deauthentication attack. <br>
+        We can disconnect this client from network. He will automatically connects when the attack stops. <br>
+        Therefore when he connects again then we will get the handshake <br><br>
+        
+        In another terminal<br>
+        aireplay-ng --deauth 4 -a  00:10:18:90:2D:EE(bssid) -c 80:E6:50:22:A2:E8(client or station) mon0<br>
+        Hit enter<br>
+        Once you do this you will show handshake in the first terminal<br>
+        
+        Then we can quit the command by pressing CTRL +C<br>
+
+    </div>
+</body>
+
+</html>
