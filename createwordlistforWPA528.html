@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+        div{
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        5..28<br><br>
+
+        WPA /WPA2 Cracking<br>
+        1. The handshake does not contain data that helps recover the key<br>
+        2. It contains data that can be used to check if a key is valid or not<br><br>
+        
+        Create a wordlist that is a file that contains a large number of password. Then go through this file check whether the particular file has a correct password or not<br><br>
+        
+        How to create a wordlist <br>
+        crunch can be used to create a wordlist<br><br>
+        
+        Syntax:<br>
+        crunch [min] [max] [characters] -t [pattern] -o [Filename]<br><br>
+        
+        Example :-<br>
+        crunch 6 8 123abc$ -o wordlist -t a@@@@b<br><br>
+        
+        Lets explain this command min of 6 character and max of 8 character the character which it can contain is 123abc$ . Saves the file in wordlist after -o and -t if we know the first and last letter is a and b<br><br>
+        
+        This will generate a list of password and store in a file<br>
+        You can also look for man<br><br>
+        
+        man crunch — it will give all the information about command crunch<br><br>
+        
+        -p is also a good format telling that password should not repeat the character and that will reduce the size<br><br>
+        
+        To open a file use cat wordlist.txt<br><br>
+        
+    </div>
+</body>
+
+</html>
