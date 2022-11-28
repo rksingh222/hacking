@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+        div{
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        5..29 Cracking WPA2 using a wordlist attack<br><br>
+
+        Two things needed to crack WPA/WPA2<br>
+        1. 4-way handshake<br>
+        2. wordlist<br>
+        Message Integrity code is used by access point whether the password is correct<br>
+        The generated MIC is same as the handshake MIC then it has cracked the password<br><br>
+        
+        aircrack-ng wpa_handshake-01.cap -w test.txt<br><br>
+        
+        Wpa handshake file is a file which was generated in the section 5..27 and test.txt is wordlist file generated in 5..28<br>
+        
+        MIC is correct <br>
+        Speed depends in the processor and a file<br>
+        Online services - where you upload a handshake and check the wordlist<br>
+        They have huge number of wordlist<br><br>
+        
+        Methods to crack WPA<br>
+        Social engineering to get password<br>
+        Evil twin attack<br>
+        Cracking using the gpu<br>
+        Pipe in crunch aircrack-ng<br>
+        
+    </div>
+</body>
+
+</html>
