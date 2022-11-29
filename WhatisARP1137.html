@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        What is ARP poisoning?<br><br>
+
+        Man in the middle attack - if we are able to intercept the connection between two devices <br>
+        The hacker would be able to place himself in the middle of the connection<br>
+        Allowing to intercept to see what is happening between two devices<br>
+        
+        ARP Spoofing attack<br><br>
+        
+        Victim ——— Acesspoint(Router) (Response or request)<br>
+        But now once hacker has the control<br><br>
+        
+        Victim — Hacker — Accesspoint (response or request)<br><br>
+        
+        Address Resolution Protocol (ARP)<br>
+        Simple protocol to allows linking ip address to MAC address<br><br>
+        
+        Each devices has an IP address and MAC address<br>
+        There are device A , Router, device B, device C, device D<br><br>
+        
+        Lets say device A needs to communicate with device C<br>
+        Device A knows the IP address of Device C<br><br>
+        
+        In order to communicate with in the same network device A should know the Mac address of device C<br>
+        The communication with in the network is carried out using the MAC address and not using the IP address<br><br>
+        
+        So A uses a ARP protocol and sends a broadcast message to all the Devices connected with in network. <br>
+        Other devices will ignore this and the one it wants to communicate with will send its ip address and MAC address<br> 
+        to the device A. Now it has Mac address it will be able to communicate<br>
+        ARP is simple it has request and response<br>
+        Each computer has a ARP table which links ip address in the network with there MAC address<br><br>
+        
+        In the terminal kali<br><br>
+        
+        arp -a <br><br>
+        
+        Gives the ip address of router and MAC address <br><br>
+        
+        This same command in windows also works<br><br>
+        
+        arp -a <br><br>
+        
+        We can easily modify the MAC address of router by exploiting ARP protocol<br><br>
+        
+        Victim ——request/response ——Access point(router) —— resources<br><br>
+        
+        Victim——(I am 10.0.2.1 i.e IP address of Router will be told by hacker)—hacker<br><br>
+        
+        Hacker ——( I am 10.0.2.7 IP address of Victim will be told by hacker to router) —router<br><br>
+        
+        ARP is weak because its not verifying the hacker and its going to trust me<br><br>
+        
+        This way the information will travel before hacker and I am become middle man<br><br>
+        
+        Victim — hacker — router<br><br>
+        
+
+    </div>
+</body>
+
+</html>
