@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+        div{
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        10..34<br><br>
+        Ifconfig in kali terminal to know the network it is connected to<br><br> 
+        
+        netdiscover -r<br><br>
+        
+        Lets say your net address x.x.x.14 and to discover all the devices which are using your network<br>
+        We call this command with IP address ranging from x.x.x.1/24 => (1/24 means network subnet mask starting from 1 to 254)<br><br>
+        
+        In my case I had inet of 192.168.243.3 so I use command<br><br>
+        
+        netdiscover -r 192.168.243.1/24<br><br>
+    </div>
+</body>
+
+</html>
