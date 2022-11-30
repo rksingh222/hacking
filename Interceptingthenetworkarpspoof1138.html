@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        11...38 Intercepting the Network<br><br>
+
+        ARP Spoofing using arpspoof tool to run arp spoofing attacks<br>
+        Simple and reliable<br>
+        Ported to most operating system including android and iOS<br>
+        Usage is always the same<br><br>
+
+        arpspoof -i [interface] -t [clientIP] [gatewayIP]<br>
+        arpspoof -i [interface] -t [gatewayIP] [clientIP]<br><br>
+
+        Lets suppose I have a windows machine with ip 10.0.2.7<br>
+        My router or my eth0 ip address is 10.0.2.1<br>
+        So I want to tell from my kali machine that I am windows to the router<br><br>
+
+        This can be done like this<br><br>
+
+        In one terminal<br>
+        arpspoof -i eth0 -t 10.0.2.7 10.0.2.1<br><br>
+
+        So I am telling my router that I am 10.0.2.7(although it is windows machine) from kali machinewhich<br><br>
+
+        In second terminal<br>
+        arpspoof -i eth0 10.0.2.1 10.0.2.7 <br><br>
+        
+        Here I am telling my windows machine that I am router which is 10.0.2.1 although it is my kali machine(kali<br>
+        machine is acting like a router here)<br>
+
+
+        Now if you go to windows machine and write arp -a it will have a different physical address . So when I did not<br>
+        use arpspoof it used a different physical address and after arpspoof it uses different physical address<br><br>
+
+        So when this happens kali machine gets request from the other machine it will stop this request<br>
+        To enable this request which is port forwarding<br><br>
+
+        Enable port forwarding<br><br>
+
+        Open another terminal<br>
+        echo 1 > /proc/sys/net/ipv4/ip_forward<br><br>
+
+        there is a space between 1 and > symbol also from > to /proc
+
+        This command will allow to take request from the machine<br>
+
+
+    </div>
+</body>
+
+</html>
