@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        11…44<br><br>
+
+        Bypassing https<br><br>
+        
+        Most Websites uses https<br>
+        Sniffed data will be encrypted<br><br>
+        
+        Downgrade https to http<br><br>
+        
+        HSTS - HTTP strict Transport security<br>
+        Used by Facebook, twitter and few other famous websites<br><br>
+        
+        Problem: <br>
+        Modern browsers are hard-coded to only load a list of HSTS websites over https<br><br>
+        
+        Trick the browser into loading a different website<br><br>
+        
+        Replace all links for HSTS websites with similar links<br><br>
+        
+        Ex: -<br>
+        facebook.com -> facebook.corn<br>
+        Twitter.com -> twiter.com<br><br>
+        
+        We use HSTS caplet<br>
+        Hstshijack.cap<br><br>
+        
+        This caplet will be present in<br> 
+        Usr/local/share/bettercap/caplets/hstshijack.cap<br>
+        Open it by leaped<br><br>
+        
+        In terminal<br>
+        bettercap -iface eth0 -caplet /root/spoof.cap<br><br>
+        
+        Run this<br>
+        Hsts tab and you will see the caplet<br>
+        Run it<br><br>
+        
+        To remove browsing data<br>
+        Settings chrome/ clear browsing data <br>
+        
+        
+
+    </div>
+</body>
+
+</html>
