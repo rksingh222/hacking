@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        11..51<br><br>
+
+        Wireshark - sniffing and analysing data<br><br>
+        
+        Open Wireshark <br>
+        Also follow previous article to come in man in middle using bettercap command<br>
+        bettercap -iface eth0 -caplet /root//spoof.cap<br><br>
+        
+        In Wireshark you have an option capture options <br><br>
+        
+        In eth0 it will show you the traffic<br><br>
+        
+        You can also choose other interface along with this too<br>
+        But for now we will sniff in eth0<br><br>
+        
+        If you want to analyse the data<br>
+        You can go to output  tab in the same window and saved packets can be opened here and analysed<br><br>
+        
+        Go to input tab again with eth0 selected<br>
+        Click on start it will start capturing the data<br><br>
+        
+        It will show everything whatever happened in the computer all the traffic<br><br>
+        
+        Before we search anything <br>
+        We need to call in bettercap<br><br>
+        
+        Hstshijack/hstshijack caplets with tab and then enter<br><br>
+        
+        Go to target computer<br><br>
+        
+        Now go and search in google.ie<br><br>
+        And search zsecurity <br><br>
+        
+        Lets go back to Wireshark<br>
+        Click on red button to stop in Wireshark second button<br><br>
+        
+        Main interface of Wireshark<br><br>
+        
+        No, Time , source (which called the site), destination(target machine or target ip on internet) , protocol , length(size) , info about packet<br><br>
+        
+        Green -is TCP<br>
+        Darkblue is DNS<br>
+        Lightblue is UDP<br>
+        Black is TCP with issues<br><br>
+        
+        
+
+    </div>
+</body>
+
+</html>
