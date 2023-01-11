@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Creating a fake access point(honeypot)<br><br>
+
+        First go to kali setting or in the VMware Fusion<br>
+        Window-> Virtual Machine library<br>
+        It will allow kali to be opened in settings mode<br>
+        Network adapter should be in NAT Network<br><br>
+
+        In kali linux if we go and in terminal<br>
+        ifconfig<br><br>
+
+        Virtual interface eth0 created by virtual box we set this machine to use a NAT network<br>
+        If it has inet that means it is properly connected to NAT network<br>
+        It will provide the kali machine with internet access as long as my host machine has internet access<br><br>
+
+        In kali linux<br>
+        If we go to browser and open bing and it will allow me to open any website<br><br>
+
+        Wireless adapter that supports AP mode<br><br>
+
+        The other interface that we need a wireless adapter that can act as access point<br><br>
+
+        Wireless adapter should be connected to kali machine and should be in managed mode and it should not have any IP<br>
+        address it should not be connected to any network<br><br>
+
+        Now in kali linux<br>
+        With 9 dots present click and you will see all application<br>
+        Type in search box type wifi<br><br>
+
+        You will see wifi hotspot<br><br>
+
+        Open<br><br>
+
+        SSID - name of network keep as internet<br>
+        Password - open (means no password)<br>
+        Wifi interface - that will be broadcasting the signal it will be wireless adapter wlan0<br>
+        Internet interface - that is eth0 virtual<br><br>
+
+        Before staring click on advance<br>
+        Frequency you can set<br>
+        Set MAC address of network<br>
+        You can specify no virtual<br>
+        You want the channel to broadcast<br>
+        Mac Filter - which MAC address allowed in this network<br>
+        Keep everything default<br><br>
+
+        Click on create hotspot<br>
+        Running as PID it will show in the bottom<br><br>
+
+        Go to windows machine and see if its working in my VMware<br><br>
+
+        Do not test from your host machine that is Mac it won’t work<br>
+        You can check from other machine which are in your range<br><br>
+
+        See if it has internet in network<br>
+        And connect<br><br>
+
+        Open Firefox<br>
+        Open bing.com and it will load that means we have created a fake access point<br><br>
+
+        You can use arp spoofing in your target which is kali machine and open wireshark and analyse packets and see all<br>
+        information<br><br>
+
+        One more note-: you need to the set the interface that is broadcasting the signal in wireshark or in any other<br>
+        tool you are using. In this case its wlan0<br><br>
+
+
+    </div>
+</body>
+
+</html>
