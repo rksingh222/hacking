@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        11…57<br><br>
+
+        Wireshark to detect ARP Attacks<br><br>
+
+        Open Wireshark<br>
+        Edit-> preferences -> protocols -> ARP -> check checkbox detect arp request storm<br><br>
+
+        It will discover if anybody is trying to discover all the devices on the network<br><br>
+
+        Click on capture<br><br>
+
+        Go to kali machine<br><br>
+
+        netdiscover -I eth0 -r 10.20.14.1/24<br><br>
+
+        In capture it will tell the IP address that someone is enquiring about your IP<br><br>
+
+        Go to Analyse -> Expert Information<br>
+        (It will show you the suspicious activities)<br><br>
+
+        Now in terminal call<br>
+        bettercap -iface eth0 -caplet /roof/spoof.cap<br><br>
+
+        Go to Analyse - >Expert Information<br>
+        (It gives you warning)<br><br>
+
+        This is the way you can find out ARP attacks<br><br>
+
+        Now lets find out how we can prevent an ARP attack<br><br>
+
+        Go to windows and type arp -a<br>
+        The entries are dynamic and static type<br>
+        If type is static in ARP table then configure them to be a dynamic<br><br>
+
+
+        But problem with static is with if you have to allow someone to connect<br>
+        On this network you should set up manually<br><br>
+
+
+
+    </div>
+</body>
+
+</html>
