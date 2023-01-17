@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Introduction to server side attacks<br><br>
+
+
+        1. Need an IP address<br>
+        2. Very simple if target is on the same network (netdiscover or zen map)<br>
+        3. If target has a domain , then a single ping will return its IP.<br>
+        4. > ping www.facebook.com<br>
+        5. Getting the IP is tricker if the target is personal computer, might be useless if the target is accessing the<br>
+        internet through a network as the IP will be the router IP and not the targets, client side attacks are more<br>
+        effective in this case as reverse connection can be used<br><br>
+
+        Go to metasploitable<br>
+        In terminal -> ifconfig<br><br>
+
+        IP is 192.168.243.4<br><br>
+
+        Now go to kali machine<br>
+        And try to ping in terminal<br><br>
+
+        ping 192.168.243.4<br><br>
+
+        When you do that you will receive messages like<br><br>
+        64 bytes from 192.168.243.4<br><br>
+
+        The attack we are going to learn will work against websites , web servers , people, normal computer as long as<br>
+        you can ping them<br>
+
+        Metasploitable is a virtual machine that can list, install a graphical interface and then I will be able to just<br>
+        use it<br><br>
+
+        It has a webserver (metasploitable) so we can use it by<br>
+        Typing in kali machine<br><br>
+
+        Web browser<br>
+        In browser hit 192.168.243.4<br><br>
+
+        If you can ping that IP then you can use server side attacks<br>
+        It mostly work against servers because servers have real IP’s<br><br>
+
+        If the person in the same network then you can ping them and do server side attacks<br>
+
+
+    </div>
+</body>
+
+</html>
