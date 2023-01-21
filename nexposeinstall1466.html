@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #f5f6fa;
+        }
+
+        div {
+            color: #67727e;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Nexpose - Installing Expose<br><br>
+
+        Nexpose - Vulnerability Management Framework<br><br>
+
+        1. Discover open ports and running services<br>
+        2. Find Vulnerability<br>
+        3. Find exploits<br>
+        4. Verify them<br>
+        5. Generate Reports<br>
+        6. Automate scans<br><br>
+
+        Nexpose - rapid7.com/products/nexpose/request-download<br><br>
+
+        Now cd downloads<br>
+        Cd ls<br>
+        Rapid7Setup-Linux64.bin<br>
+        We are gonna have to change its permission to unexecutable<br>
+        Chmod +x Rapid7Setup-Linux64.bin<br>
+        Ls<br>
+        Which means that iit is unexecutable if it shows in green<br>
+        We can run it<br>
+        ./Rapid7Setup-Linux64.bin<br>
+        Do not check this checkbox - initialise and start after installation<br>
+        Disable the autostart of nexpose program<br>
+        Systemctl disable nexposeconsole.service<br><br>
+
+        Cd /opt/rapid7nexpose<br>
+        Ls<br>
+        Cd nsc<br>
+        ./nsc.sh<br>
+        It takes 20 -30 minutes to initailze this framework<br>
+        Click on advanced<br>
+        Accept the risk and continue<br>
+
+    </div>
+</body>
+
+</html>
