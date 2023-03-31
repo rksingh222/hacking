@@ -1,0 +1,31 @@
+find files and directories in target website
+
+dirb [target][wordlist][options]
+
+man dirb
+
+go to metasploitable machine i.e vm
+
+cd /var/www
+ls -la
+mutillidae
+
+find ip address of metasploitable machine
+using ifconfig
+
+hit in browser
+cd mutillidae
+
+in broswer 
+ip/mutillidae/index.php
+
+in kali
+man dirb
+
+we are targeting website not ip address
+dirb http://10.20.14.204/mutillidae (metasploitableip) hit enter
+
+it will have wordlist_files
+
+we can search the files which we have found by checking in the browser
+http://10.20.14.204/mutillidae/passwords/account.txt
