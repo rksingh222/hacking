@@ -1,0 +1,30 @@
+create a file
+
+passthru("ping" . $textbox);
+
+print $textbox
+
+10.20.14.203; ls -la
+
+ping 10.20.14.203; ls -la
+
+file Upload Vulns - only allow safe files to be uploaded
+
+Code Execution Vulns
+Don't use dangerous function
+filter use input before execution
+
+file inclusion
+Disable allow_url_fopen and allow_url_include
+use static file inclusion
+
+sudo nano /etc/php5/cgi/php.ini
+
+search allow_url
+
+allow_url_fopen = off
+allow_url_include = off
+
+index.php?page=news.php
+
+include($GET['page']);
